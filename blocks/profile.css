@@ -63,3 +63,31 @@
   background-position: center;
   margin-right: 24px;
 }
+
+@media screen and (max-width: 480px) {
+  .profile {
+    flex-direction: column;
+  }
+  .profile__description {
+    width: 100%;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 36px;
+  }
+  .profile__info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    grid-gap: 0 16px;
+    align-items: baseline;
+  }
+  .profile__add-button {
+    margin: 0;
+    width: 100%;
+  }
+
+  .profile__title {
+    margin-top: 26.25px;
+  }
+}
