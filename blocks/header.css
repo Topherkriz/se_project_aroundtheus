@@ -1,0 +1,40 @@
+.header {
+  margin-top: 45px;
+}
+
+.header__line {
+  margin-top: 41px;
+}
+
+@media screen and (max-width: 400px) {
+  .header__line {
+    margin-top: 41px;
+    opacity: 0.7;
+    border: 1px solid #545454;
+  }
+  .header__image {
+    margin-left: 27px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .header__line {
+    margin-top: 41px;
+    opacity: 0.7;
+    border: 1px solid #545454;
+  }
+  .header__image {
+    margin-left: 27px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+  .header__line {
+    margin-top: 41px;
+    opacity: 0.7;
+    border: 1px solid #545454;
+  }
+  .header__image {
+    margin-left: 27px;
+  }
+}
