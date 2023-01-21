@@ -1,4 +1,4 @@
-.footer__copyright {
+.footer {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (min-width: 297px) and (max-width: 596px) {
-  .footer__copyright {
+  .footer {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -25,7 +25,7 @@
 }
 
 @media screen and (min-width: 596px) and (max-width: 894px) {
-  .footer__copyright {
+  .footer {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -39,7 +39,7 @@
   }
 }
 @media screen and (min-width: 895px) and (max-width: 1200px) {
-  .footer__copyright {
+  .footer {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
