@@ -4,8 +4,4 @@
 @import "../blocks/profile.css";
 @import "../blocks/header.css";
 @import "../blocks/footer.css";
-
-@font-face {
-  font-family: "Inter", sans-serif;
-  src: url("myfont.woff2") format("woff2"), url("myfont.woff") format("woff");
-}
+@import "../vendor/fonts/fonts.css";

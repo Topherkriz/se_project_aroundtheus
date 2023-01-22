@@ -141,7 +141,7 @@
 
   .profile__title {
     margin-top: 26.25px;
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     font-size: 42px;
     line-height: 48px;
     font-weight: 500;
