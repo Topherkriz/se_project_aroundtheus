@@ -11,7 +11,7 @@
     "title button"
     "description description";
   grid-template-columns: minmax(auto, 373px) auto;
-  grid-gap: 16px 18px;
+  gap: 16px 18px;
 }
 
 .profile__edit-button {
@@ -91,7 +91,7 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    grid-gap: 0 16px;
+    gap: 0 16px;
     align-items: baseline;
   }
   .profile__add-button {
@@ -131,7 +131,7 @@
       "title button"
       "description description";
     grid-template-columns: minmax(auto, 373px) auto;
-    grid-gap: 16px 18px;
+    gap: 16px 18px;
   }
   .profile__add-button {
     width: 150px;
@@ -170,7 +170,7 @@
       "title button"
       "description description";
     grid-template-columns: minmax(auto, 373px) auto;
-    grid-gap: 16px 18px;
+    gap: 16px 18px;
   }
   .profile__add-button {
     width: 150px;
