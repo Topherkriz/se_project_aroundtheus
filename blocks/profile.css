@@ -77,7 +77,6 @@
     flex-direction: column;
   }
   .profile__description {
-    width: 100%;
     text-align: center;
     margin-top: 14px;
     margin-bottom: 36px;

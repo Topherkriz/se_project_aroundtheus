@@ -1,5 +1,9 @@
 .card {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  list-style: none;
 }
 
 .card__list {
@@ -9,13 +13,6 @@
   gap: 20px 17px;
   margin: 0;
   padding: 0;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  list-style: none;
 }
 
 .card__image {
