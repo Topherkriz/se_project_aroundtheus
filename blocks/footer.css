@@ -9,9 +9,14 @@
   margin-bottom: 60px;
 }
 
-@media screen and (min-width: 297px) and (max-width: 596px) {
+@media screen and (max-width: 596px) {
   .footer {
     max-width: 282px;
+  }
+
+  .footer__title {
+    margin-top: 48px;
+    margin-bottom: 36px;
   }
 }
 

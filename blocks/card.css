@@ -42,6 +42,11 @@
   line-height: 29px;
   color: black;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 219px;
+  height: 29px;
 }
 
 .card__like-button {
@@ -53,4 +58,5 @@
 
 .card__like-button:hover {
   opacity: 0.5;
+  cursor: url(../images/hand-cursor.svg), auto;
 }
