@@ -9,7 +9,14 @@
   margin-bottom: 60px;
 }
 
-@media screen and (max-width: 596px) {
+@media screen and (max-width: 581px) {
+  .footer__title {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media screen and (max-width: 581px) {
   .footer {
     max-width: 282px;
   }
@@ -20,12 +27,12 @@
   }
 }
 
-@media screen and (min-width: 596px) and (max-width: 894px) {
+@media screen and (min-width: 581px) and (max-width: 879px) {
   .footer {
     max-width: 581px;
   }
 }
-@media screen and (min-width: 895px) and (max-width: 1200px) {
+@media screen and (min-width: 880px) and (max-width: 2000px) {
   .footer {
     max-width: 880px;
   }
