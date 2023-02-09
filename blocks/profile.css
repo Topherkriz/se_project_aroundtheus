@@ -125,15 +125,12 @@
   .profile__description {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 72px;
   }
 
   .profile__add-button {
     margin-left: auto;
     margin-bottom: 86px;
-  }
-
-  .profile__description {
-    margin-bottom: 72px;
   }
 
   .profile__image {
