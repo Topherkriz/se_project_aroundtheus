@@ -79,7 +79,6 @@
   object-fit: cover;
   background-position: center;
   margin-right: 24px;
-  margin-bottom: 47.25px;
 }
 
 @media screen and (max-width: 879px) {
@@ -128,7 +127,16 @@
     line-height: 22px;
   }
 
-  .profile__title {
-    margin-top: 26.25px;
+  .profile__add-button {
+    margin-left: auto;
+    margin-bottom: 86px;
+  }
+
+  .profile__description {
+    margin-bottom: 72px;
+  }
+
+  .profile__image {
+    margin-bottom: 47.25px;
   }
 }
