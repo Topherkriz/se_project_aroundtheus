@@ -64,4 +64,8 @@
   .card__image {
     max-width: 100%;
   }
+
+  .card__description {
+    max-width: 242px;
+  }
 }

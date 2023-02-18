@@ -49,9 +49,6 @@
   grid-area: title;
   margin: 0;
   color: #ffffff;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   max-width: min-content;
   max-height: 100%;
 }
@@ -65,9 +62,6 @@
   grid-area: description;
   margin: 0;
   color: #ffffff;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   width: 282px;
   max-height: 100%;
 }
@@ -89,7 +83,10 @@
     text-align: center;
     margin-top: 14px;
     margin-bottom: 36px;
-    width: 282px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 19%;
   }
   .profile__info {
     display: flex;
@@ -114,6 +111,10 @@
     font-size: 22px;
     line-height: 27px;
     text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 66%;
   }
 
   .profile__image {
