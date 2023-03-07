@@ -57,5 +57,8 @@
   cursor: url(../images/hand-cursor.svg), auto;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 880px) {
+  .card__list {
+    margin-top: 36px;
+  }
 }
