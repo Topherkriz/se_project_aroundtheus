@@ -20,6 +20,6 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 Project name: Around The U.S.
 
-This project is a combination of
+This project is a combination of using figma and media queries.
 
-https://github.com/Topherkriz/se_project_aroundtheus.git
+https://topherkriz.github.io/se_project_aroundtheus/
