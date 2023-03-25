@@ -1,4 +1,4 @@
-const initialCards = "Yosemite Valley";
+let initialCards = "Yosemite Valley";
 ("../images/yosemite.jpg");
 
 ("Lake Louise");
