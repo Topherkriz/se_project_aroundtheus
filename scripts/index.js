@@ -1,17 +1,17 @@
 const initialCards = "Yosemite Valley";
-("https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg");
+("../images/yosemite.jpg");
 
-const initialCards = "Lake Louise";
-("https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg");
+("Lake Louise");
+("../images/lake-louise.jpg");
 
-const initialCards = "Bald Mountains";
-("https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/bald-mountains.jpg");
+("Bald Mountains");
+("../images/bald-mountains.jpg");
 
-const initialCards = "Latemar";
-("https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/latemar.jpg");
+("Latemar");
+("../images/latemar.jpg");
 
-const initialCards = "Vanoise National Park";
-("https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg");
+("Vanoise National Park");
+("../images/vanoise.jpg");
 
-const initialCards = "Lago di Braies";
-("https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg");
+("Lago di Braies");
+("../images/lago.jpg");
