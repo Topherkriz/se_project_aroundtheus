@@ -29,6 +29,7 @@
   color: black;
   padding: 25px 20px;
   border-radius: 0 0 10px 10px;
+  margin-top: -4px;
 }
 
 .card__title {
