@@ -8,3 +8,16 @@ const initialCards = [
   { name: "Vanoise National Park", link: "../images/vanoise.jpg" },
   { name: "Lago di Braiese", link: "../images/lago.jpg" },
 ];
+
+const profileEditButton = document.querySelector("#profile-edit-button");
+const profileEditModal = document.querySelector("#profile-edit-modal");
+
+profileEditButton.addEventListener("click", () => {
+  profileEditModal.classList.add("modal_opened");
+});
+
+const profileClosedButton = document.querySelector("#profile-closed-button");
+
+profileClosedButton.addEventListener("click", () => {
+  profileEditModal.classList.add("modal_closed");
+});
