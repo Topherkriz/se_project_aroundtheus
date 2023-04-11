@@ -9,15 +9,39 @@ const initialCards = [
   { name: "Lago di Braiese", link: "../images/lago.jpg" },
 ];
 
-const profileEditButton = document.querySelector("#profile-edit-button");
-const profileEditModal = document.querySelector("#profile-edit-modal");
+/* Elements */
+const profileEditButton = document.getElementById("profile-edit-button");
+const profileEditModal = document.getElementById("profile-edit-modal");
+const profileClosedButton = document.getElementById("profile-closed-button");
+
+const profileTitle = document.getElementById("js-profile-title");
+const profileDescription = document.getElementById("js-profile-description");
+const profileTitleInput = document.getElementById("js-title-input");
+const profileDescriptionInput = document.getElementById("js-description-input");
+
+const profileEditForm = profileEditModal.querySelector(".modal__form");
+
+/* Functions */
+
+function closePopup() {
+  profileEditModal.classList.remove("modal_enter");
+}
+
+/* Event Handlers */
+
+function handleProfileEditSubmit(event) {
+  event.preventDefault();
+  profileDescription.textContent = profileDescriptionInput.value;
+  profileTitle.textContent = profileTitleInput.value;
+  closePopup();
+}
 
 profileEditButton.addEventListener("click", () => {
-  profileEditModal.classList.add("modal_opened");
+  profileDescriptionInput.value = profileDescription.textContent;
+  profileTitleInput.value = profileTitle.textContent;
+  profileEditModal.classList.add("modal_enter");
 });
 
-const profileClosedButton = document.querySelector("#profile-closed-button");
+profileClosedButton.addEventListener("click", closePopup);
 
-profileClosedButton.addEventListener("click", () => {
-  profileEditModal.classList.add("modal_closed");
-});
+profileEditForm.addEventListener("submit", handleProfileEditSubmit);
