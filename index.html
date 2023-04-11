@@ -41,7 +41,7 @@
         </section>
 
         <section class="card page__section">
-          <ul class="card__list"></ul>
+          <ul class="card__list" id="js-card-list"></ul>
         </section>
       </main>
       <footer class="footer page__section">
@@ -53,7 +53,7 @@
       <div class="modal__container">
         <button class="modal__closed" id="profile-closed-button"></button>
         <p class="modal__heading">Edit profile</p>
-        <form class="modal__form">
+        <form class="modal__form" id="js-modal-form">
           <input
             type="text"
             name="title"
@@ -71,58 +71,11 @@
       </div>
     </div>
 
-    <template id="card-template">
-      <li class="card__element">
-        <img
-          class="card__image"
-          src="./images/yosemite.jpg"
-          alt="Yosemite Valley"
-        />
-        <div class="card__description">
-          <h2 class="card__title">Yosemite Valley</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </li>
-      <li class="card__element">
-        <img
-          class="card__image"
-          src="./images/lake-louise.jpg"
-          alt="lake louise"
-        />
-        <div class="card__description">
-          <h2 class="card__title">Lake louise</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </li>
-      <li class="card__element">
-        <img
-          class="card__image"
-          src="./images/bald-mountains.jpg"
-          alt="Bald Mountains"
-        />
-        <div class="card__description">
-          <h2 class="card__title">Bald Mountains</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </li>
-      <li class="card__element">
-        <img class="card__image" src="./images/latemar.jpg" alt="Latemar" />
-        <div class="card__description">
-          <h2 class="card__title">Latemar</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </li>
-      <li class="card__element">
-        <img class="card__image" src="./images/vanoise.jpg" alt="Vanoise" />
-        <div class="card__description">
-          <h2 class="card__title">Vanoise National Park</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </li>
-      <li class="card__element">
-        <img class="card__image" src="./images/lago.jpg" alt="Lago" />
-        <div class="card__description">
-          <h2 class="card__title">Lago di Braies</h2>
+    <template id="js-card-template">
+      <li class="card">
+        <img class="card__image" id="js-card-image" src="" alt="" />
+        <div class="card__description" id="js-card-description">
+          <h2 class="card__title" id="js-card-title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>
