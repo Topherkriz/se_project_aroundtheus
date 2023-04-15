@@ -31,7 +31,7 @@ const initialCards = [
 
 const profileEditButton = document.getElementById("profile-edit-button");
 const profileEditModal = document.getElementById("profile-edit-modal");
-const profileClosedButton = document.getElementById("profile-closed-button");
+const profileCloseButton = document.getElementById("profile-close-button");
 const profileTitle = document.getElementById("js-profile-title");
 const profileDescription = document.getElementById("js-profile-description");
 const profileTitleInput = document.getElementById("js-title-input");
@@ -43,8 +43,9 @@ const cardTemplate =
   document.getElementById("js-card-template").content.firstElementChild;
 
 //Functions
+
 function closePopup() {
-  profileEditModal.classList.remove("modal_enter");
+  profileEditModal.classList.remove("modal__open");
 }
 
 function getCardElement(cardData) {
@@ -72,12 +73,12 @@ function handleProfileEditSubmit(event) {
 //Event Listeners
 
 profileEditButton.addEventListener("click", () => {
-  profileTitleInput.value = profileTitle.textContent;
-  profileDescriptionInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal_enter");
+  profileTitleInput.value = profileTitle.textContent.trim();
+  profileDescriptionInput.value = profileDescription.textContent.trim();
+  profileEditModal.classList.add("modal__open");
 });
 
-profileClosedButton.addEventListener("click", closePopup);
+profileCloseButton.addEventListener("click", closePopup);
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 

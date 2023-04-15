@@ -33,7 +33,7 @@
 }
 
 .card__title {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -51,11 +51,13 @@
   width: 21px;
   height: 18px;
   border: none;
+  transition: 2s;
 }
 
 .card__like-button:hover {
   opacity: 0.5;
-  cursor: url(../images/hand-cursor.svg), auto;
+  cursor: pointer;
+  transition: 2s;
 }
 
 @media screen and (max-width: 880px) {

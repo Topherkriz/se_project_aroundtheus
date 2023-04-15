@@ -24,7 +24,8 @@
 
 .profile__edit-button:hover {
   opacity: 60%;
-  cursor: url(../images/hand-cursor.svg), auto;
+  cursor: pointer;
+  transition: 2s;
 }
 
 .profile__add-button {
@@ -37,11 +38,12 @@
 
 .profile__add-button:hover {
   opacity: 60%;
-  cursor: url(../images/hand-cursor.svg), auto;
+  cursor: pointer;
+  transition: 2s;
 }
 
 .profile__title {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 42px;
   line-height: 48px;
@@ -57,7 +59,7 @@
 }
 
 .profile__description {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
