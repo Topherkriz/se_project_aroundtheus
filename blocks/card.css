@@ -51,13 +51,12 @@
   width: 21px;
   height: 18px;
   border: none;
-  transition: 2s;
+  transition: 0.3s;
 }
 
 .card__like-button:hover {
   opacity: 0.5;
   cursor: pointer;
-  transition: 2s;
 }
 
 @media screen and (max-width: 880px) {

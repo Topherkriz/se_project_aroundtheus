@@ -37,14 +37,14 @@
 }
 
 .modal__close:hover {
-  transition: 2s;
+  transition: 0.3s;
   opacity: 80%;
   cursor: pointer;
 }
 
 .modal__heading {
   color: #000;
-  width: 330px;
+  max-width: max-content;
   font-size: 24px;
   font-weight: 900;
   line-height: 29px;
@@ -104,15 +104,12 @@
     width: 238px;
   }
 
-  .modal__heading {
-    width: 100%;
-  }
-
   .modal__button {
     width: 100%;
     height: 46px;
     font-size: 14px;
     line-height: 17px;
+    margin: 45px 22px 25px 22px;
   }
 
   .modal__heading {
@@ -125,10 +122,5 @@
   .modal__close {
     width: 26px;
     height: 26px;
-  }
-
-  .modal__button {
-    width: 100%;
-    margin: 45px 22px 25px 22px;
   }
 }
