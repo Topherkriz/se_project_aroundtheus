@@ -37,7 +37,11 @@
               Explorer
             </p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button
+            class="profile__add-button"
+            id="profile-add-button"
+            type="button"
+          ></button>
         </section>
 
         <section class="card page__section">
@@ -48,7 +52,7 @@
         <p class="footer__title">&copy; 2022 Around The U.S.</p>
       </footer>
     </div>
-
+    <!--Edit Modal-->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button
@@ -57,12 +61,12 @@
           type="button"
         ></button>
         <h2 class="modal__heading">Edit profile</h2>
-        <form class="modal__form" id="js-modal-form">
+        <form class="modal__form" id="js-profile-modal-form">
           <input
             type="text"
             name="title"
             placeholder="Name"
-            id="js-title-input"
+            id="js-profile-title-input"
             class="modal__input"
             required
           />
@@ -70,8 +74,41 @@
             type="text"
             name="description"
             placeholder="Description"
-            id="js-description-input"
+            id="js-profile-description-input"
             class="modal__input"
+            required
+          />
+          <button class="modal__button" id="save-button" type="submit">
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!--Add Modal-->
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          id="new-card-close-button"
+          type="button"
+        ></button>
+        <h2 class="modal__heading">New Place</h2>
+        <form class="modal__form" id="js-add-card-form">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            id="js-title-input"
+            class="modal__input modal__input_type_title"
+            required
+          />
+          <input
+            type="text"
+            name="url"
+            placeholder="Image URL"
+            id="js-url-input"
+            class="modal__input modal__input_type_url"
             required
           />
           <button class="modal__button" id="save-button" type="submit">
