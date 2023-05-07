@@ -26,9 +26,6 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
-
-//Elements
-//Edit Form Modal
 const profileEditButton = document.getElementById("profile-edit-button");
 const profileEditModal = document.getElementById("profile-edit-modal");
 const profileCloseButton = profileEditModal.querySelector(".modal__close");
@@ -48,18 +45,16 @@ const cardTemplate =
 const addNewCardButton = document.getElementById("profile-add-button");
 const addCardModal = document.getElementById("add-card-modal");
 const newCardCloseButton = addCardModal.querySelector(".modal__close");
-
+const newCardTitleInput = addCardModal.querySelector(
+  ".modal__input_type_title"
+);
+const newCardUrlInput = addCardModal.querySelector(".modal__input_type_url");
+const addCardForm = document.getElementById("js-add-card-form");
 //Functions
 
 function closePopup(modal) {
   modal.classList.remove("modal__open");
 }
-
-//function openPopup() {
-//profileTitleInput.value = profileTitle.textContent.trim();
-//profileDescriptionInput.value = profileDescription.textContent.trim();
-//profileEditModal.classList.add("modal__open");
-//}
 
 function openPopup(modal) {
   modal.classList.add("modal__open");
@@ -71,6 +66,7 @@ function getCardElement(cardData) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardAtlEl = cardElement.querySelector(".card__image");
+  const likeButton = cardElement.querySelector(".card__like-button_active");
 
   cardTitleEl.textContent = cardData.name;
   cardImageEl.src = cardData.link;
@@ -87,6 +83,18 @@ function handleProfileEditSubmit(event) {
   closePopup();
 }
 
+function handleAddNewCardSubmit(event) {
+  event.preventDefault();
+  const cardData = {
+    name: newCardTitleInput.value,
+    link: newCardUrlInput.value,
+  };
+  const cardElement = getCardElement(cardData);
+  cardListEl.prepend(cardElement);
+  newCardTitleInput.value = "";
+  newCardUrlInput.value = "";
+  closePopup(addCardModal);
+}
 //Event Listeners
 // Edit Modal
 profileEditButton.addEventListener("click", () => {
@@ -102,8 +110,17 @@ profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 // Add Card Modal
 addNewCardButton.addEventListener("click", () => openPopup(addCardModal));
 newCardCloseButton.addEventListener("click", () => closePopup(addCardModal));
+addCardForm.addEventListener("submit", handleAddNewCardSubmit);
 
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
+});
+
+//Like Button
+const likeButtons = document.querySelectorAll(".card__like-button");
+likeButtons.forEach((likeButton) => {
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("card__like-button_active");
+  });
 });
