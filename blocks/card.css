@@ -47,11 +47,12 @@
 }
 
 .card__like-button {
-  background: transparent url(../images/like-inactive.svg) center no-repeat;
+  background: transparent url("../images/like-inactive.svg") center no-repeat;
   width: 21px;
   height: 18px;
   border: none;
   transition: 0.1s;
+  padding-left: 10px;
 }
 
 .card__like-button_active {
@@ -63,12 +64,30 @@
   cursor: pointer;
 }
 
-.card__bin-button {
-  background-image: url("../images/bin.svg");
+.card__wrapper {
+  position: relative;
 }
 
-.card__bin-button {
-  background: transparent url();
+.card__delete-button {
+  position: absolute;
+  top: 23.79px;
+  right: 16.8px;
+  width: 15.44px;
+  height: 13.51px;
+  background: transparent url("../images/bin.svg") center no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.card_delete-button-lid {
+  position: absolute;
+  top: 18px;
+  right: 15.5px;
+  width: 18px;
+  height: 4.49px;
+  background: transparent url("../images/bin-lid.svg") center no-repeat;
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 880px) {

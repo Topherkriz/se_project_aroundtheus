@@ -67,10 +67,13 @@ function getCardElement(cardData) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const cardAtlEl = cardElement.querySelector(".card__image");
   const likeButton = cardElement.querySelector(".card__like-button");
+  const deleteButton = cardElement.querySelector(".card__delete-button");
 
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_active");
   });
+
+  deleteButton.addEventListener("click", handleDeleteButtonClick);
 
   cardTitleEl.textContent = cardData.name;
   cardImageEl.src = cardData.link;
@@ -79,6 +82,12 @@ function getCardElement(cardData) {
 }
 
 //Event Handlers
+
+function handleDeleteButtonClick(event) {
+  const deleteButton = event.target;
+  const card = deleteButton.closest(".card");
+  card.remove();
+}
 
 function handleProfileEditSubmit(event) {
   event.preventDefault();
