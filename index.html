@@ -118,16 +118,30 @@
       </div>
     </div>
 
+    <!-- Image Modal -->
+    <div class="modal" id="image-modal">
+      <div class="modal__image-container">
+        <div class="modal__image-wrapper">
+          <button
+            class="modal__close-image-button"
+            id="image-modal-close"
+            type="button"
+          ></button>
+          <img id="modal-image-image" class="modal__image-image" />
+          <div class="modal__image-title" id="modal-image-title"></div>
+        </div>
+      </div>
+    </div>
+
     <template id="js-card-template">
       <li class="card">
         <div class="card__wrapper">
-          <button class="card_delete-button-lid"></button>
           <button class="card__delete-button" type="button"></button>
 
           <img class="card__image" id="js-card-image" src="" alt="" />
         </div>
         <div class="card__description" id="js-card-description">
-          <h2 class="card__title" id="js-card-title"></h2>
+          <h2 class="card__title card__title-hidden" id="js-card-title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>

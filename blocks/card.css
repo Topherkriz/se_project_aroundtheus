@@ -3,6 +3,7 @@
   flex-direction: column;
   border-radius: 10px;
   margin-top: 0;
+  position: relative;
 }
 
 .card__list {
@@ -72,22 +73,29 @@
   position: absolute;
   top: 23.79px;
   right: 16.8px;
-  width: 15.44px;
-  height: 13.51px;
+  width: 18px;
+  height: 19.3px;
   background: transparent url("../images/bin.svg") center no-repeat;
   border: none;
   cursor: pointer;
 }
 
-.card_delete-button-lid {
+.card__delete-button:hover {
+  transition: 0.3s;
+  opacity: 80%;
+}
+
+.card-title {
   position: absolute;
-  top: 18px;
-  right: 15.5px;
-  width: 18px;
-  height: 4.49px;
-  background: transparent url("../images/bin-lid.svg") center no-repeat;
-  border: none;
-  cursor: pointer;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  font-size: 16px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  border-radius: 3px;
 }
 
 @media screen and (max-width: 880px) {

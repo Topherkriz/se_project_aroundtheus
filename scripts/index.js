@@ -129,3 +129,32 @@ initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
 });
+
+// Image Modal
+const imageModal = document.getElementById("image-modal");
+const imageModalCloseButton = document.getElementById("image-modal-close");
+const modalImage = document.getElementById("modal-image-image");
+const modalImageTitle = document.getElementById("modal-image-title");
+
+function openImageModal(imageUrl, title) {
+  modalImage.src = imageUrl;
+  modalImageTitle.textContent = title;
+  imageModal.style.display = "flex";
+}
+
+function closeImageModal() {
+  imageModal.style.display = "none";
+}
+
+// Event listeners
+imageModalCloseButton.addEventListener("click", closeImageModal);
+
+// Handle click on card image
+cardListEl.addEventListener("click", (event) => {
+  const cardImage = event.target.closest(".card__image");
+  if (cardImage) {
+    const imageUrl = cardImage.src;
+    const title = cardImage.alt;
+    openImageModal(imageUrl, title);
+  }
+});
