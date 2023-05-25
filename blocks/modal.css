@@ -101,6 +101,7 @@
   height: 75vw;
   width: 75vh;
   position: relative;
+  margin: auto;
 }
 
 .modal__image-wrapper {
