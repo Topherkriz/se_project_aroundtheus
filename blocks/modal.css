@@ -142,7 +142,7 @@
   z-index: 1000;
 }
 
-@media screen and (max-width: 595.5px) {
+@media screen and (max-width: 580px) {
   .modal__container {
     width: 282px;
     height: 322px;
