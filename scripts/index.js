@@ -56,20 +56,12 @@ const imageModalCloseButton = document.getElementById("image-modal-close");
 const modalImage = document.getElementById("modal-image-image");
 const modalImageTitle = document.getElementById("modal-image-title");
 
-/* function closePopup(modal) {
-  modal.classList.remove("modal_open");
-}
-
-function openPopup(modal) {
-  modal.classList.add("modal_open");
-} */
-
 function closePopup(modal) {
   modal.classList.remove("modal_open");
   modal.style.opacity = "0";
   setTimeout(() => {
     modal.style.display = "none";
-  }, 300); // Adjust the duration of the transition as needed
+  }, 300);
 }
 
 function openPopup(modal) {
@@ -77,7 +69,7 @@ function openPopup(modal) {
   setTimeout(() => {
     modal.classList.add("modal_open");
     modal.style.opacity = "1";
-  }, 10); // Adjust the delay before applying the class and opacity as needed
+  }, 10);
 }
 
 function getCardElement(cardData) {
