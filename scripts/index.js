@@ -117,7 +117,7 @@ function handleAddNewCardSubmit(event) {
 
 function openImageModal(imageUrl, title) {
   modalImage.src = imageUrl;
-  modalImageTitle.alt = title;
+  modalImage.alt = title;
   modalImageTitle.textContent = title;
   openPopup(imageModal);
 }
