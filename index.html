@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="Christopher Silverio" content="HTML,CSS" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Around the U.S.</title>
+    <link rel="stylesheet" href="./vendor/normalize.css" />
+    <link rel="stylesheet" href="./vendor/fonts.css" />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body class="page">
@@ -52,6 +52,7 @@
         <p class="footer__title">&copy; 2022 Around The U.S.</p>
       </footer>
     </div>
+
     <!--Edit Modal-->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
@@ -69,6 +70,8 @@
             id="js-profile-title-input"
             class="modal__input"
             required
+            minlength="2"
+            maxlength="40"
           />
           <input
             type="text"
@@ -77,6 +80,8 @@
             id="js-profile-description-input"
             class="modal__input"
             required
+            minlength="2"
+            maxlength="200"
           />
           <button class="modal__button" id="save-button-edit" type="submit">
             Save
@@ -102,9 +107,11 @@
             id="js-title-input"
             class="modal__input modal__input_type_title"
             required
+            minlength="1"
+            maxlength="30"
           />
           <input
-            type="text"
+            type="url"
             name="url"
             placeholder="Image URL"
             id="js-url-input"
@@ -152,7 +159,7 @@
       </li>
     </template>
 
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/validation.js"></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validation.js" defer></script>
   </body>
 </html>
