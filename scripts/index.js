@@ -1,21 +1,3 @@
-// Close popup by clicking on overlay
-document.addEventListener("click", function (event) {
-  const clickedElement = event.target;
-  if (clickedElement.classList.contains("modal")) {
-    closePopup(clickedElement);
-  }
-});
-
-// Close popup by pressing Esc key
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    const openModal = document.querySelector(".modal.modal_open");
-    if (openModal) {
-      closePopup(openModal);
-    }
-  }
-});
-
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -172,3 +154,27 @@ initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
 });
+
+// Function to handle closing the popup by pressing Esc key
+function handleEscKeyPress(event) {
+  if (event.key === "Escape") {
+    const openModal = document.querySelector(".modal.modal_open");
+    if (openModal) {
+      closePopup(openModal);
+    }
+  }
+}
+
+// Add event listener for Esc key press
+document.addEventListener("keydown", handleEscKeyPress);
+
+// Function to handle closing the popup by clicking on the overlay
+function handleOverlayClick(event) {
+  const clickedElement = event.target;
+  if (clickedElement.classList.contains("modal")) {
+    closePopup(clickedElement);
+  }
+}
+
+// Add event listener for overlay click
+document.addEventListener("click", handleOverlayClick);
