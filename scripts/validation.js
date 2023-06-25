@@ -6,11 +6,9 @@ function showInputError(
   errorClass
 ) {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-  if (errorElement) {
-    inputElement.classList.add(inputErrorClass);
-    errorElement.textContent = errorMessage;
-    errorElement.classList.add(errorClass);
-  }
+  inputElement.classList.add(inputErrorClass);
+  errorElement.textContent = errorMessage;
+  errorElement.classList.add(errorClass);
 }
 
 function hideInputError(
@@ -20,11 +18,9 @@ function hideInputError(
   errorClass
 ) {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-  if (errorElement) {
-    inputElement.classList.remove(inputErrorClass);
-    errorElement.textContent = "";
-    errorElement.classList.remove(errorClass);
-  }
+  inputElement.classList.remove(inputErrorClass);
+  errorElement.textContent = "";
+  errorElement.classList.remove(errorClass);
 }
 
 function checkInputValidity(

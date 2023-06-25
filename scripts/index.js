@@ -49,6 +49,7 @@ const newCardTitleInput = addCardModal.querySelector(
 );
 const newCardUrlInput = addCardModal.querySelector(".modal__input_type_url");
 const addCardForm = document.getElementById("js-add-card-form");
+const addCardSubmitButton = addCardForm.querySelector(".modal__button");
 
 // Image Modal
 const imageModal = document.getElementById("image-modal");
@@ -126,6 +127,34 @@ function closeImageModal() {
   closePopup(imageModal);
 }
 
+function handleOverlayClick(event) {
+  const clickedElement = event.target;
+  if (clickedElement.classList.contains("modal")) {
+    closePopup(clickedElement);
+  }
+}
+
+function disableSubmitButton() {
+  addCardSubmitButton.disabled = true;
+  addCardSubmitButton.classList.add("modal__button_disabled");
+}
+
+function enableSubmitButton() {
+  addCardSubmitButton.disabled = false;
+  addCardSubmitButton.classList.remove("modal__button_disabled");
+}
+
+function checkEmptyInputs() {
+  const isInputsEmpty =
+    newCardTitleInput.value.trim() === "" ||
+    newCardUrlInput.value.trim() === "";
+  if (isInputsEmpty) {
+    disableSubmitButton();
+  } else {
+    enableSubmitButton();
+  }
+}
+
 profileEditButton.addEventListener("click", function () {
   profileTitleInput.value = profileTitle.textContent.trim();
   profileDescriptionInput.value = profileDescription.textContent.trim();
@@ -150,31 +179,34 @@ addCardForm.addEventListener("submit", handleAddNewCardSubmit);
 
 imageModalCloseButton.addEventListener("click", closeImageModal);
 
+document.addEventListener("click", handleOverlayClick);
+
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
 });
 
-// Function to handle closing the popup by pressing Esc key
-function handleEscKeyPress(event) {
+function handleAddCardModalClick(event) {
+  const clickedElement = event.target;
+  if (clickedElement.classList.contains("modal")) {
+    closePopup(addCardModal);
+  }
+}
+
+addCardModal.addEventListener("click", handleAddCardModalClick);
+
+document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     const openModal = document.querySelector(".modal.modal_open");
     if (openModal) {
       closePopup(openModal);
     }
   }
-}
+});
 
-// Add event listener for Esc key press
-document.addEventListener("keydown", handleEscKeyPress);
+// Initial state of the add card submit button
+disableSubmitButton();
 
-// Function to handle closing the popup by clicking on the overlay
-function handleOverlayClick(event) {
-  const clickedElement = event.target;
-  if (clickedElement.classList.contains("modal")) {
-    closePopup(clickedElement);
-  }
-}
-
-// Add event listener for overlay click
-document.addEventListener("click", handleOverlayClick);
+// Event listeners for add card inputs
+newCardTitleInput.addEventListener("input", checkEmptyInputs);
+newCardUrlInput.addEventListener("input", checkEmptyInputs);
