@@ -1,3 +1,6 @@
+import { enableValidation } from "./validation.js";
+
+// Const cards
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -24,6 +27,28 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
+// enableValidation start
+const profileValidationConfig = {
+  formSelector: ".form-profile",
+  inputSelector: ".form__input-profile",
+  submitButtonSelector: ".form__button-profile",
+  inputErrorClass: "form__input_type_error",
+  errorClass: "form__input-error_active",
+  inactiveButtonClass: "form__button_disabled",
+};
+
+enableValidation(profileValidationConfig);
+
+const addCardValidationConfig = {
+  formSelector: ".form-card",
+  inputSelector: ".form__input-card",
+  submitButtonSelector: ".form__button-card",
+  inputErrorClass: "form__input_type_error",
+  errorClass: "form__input-error_active",
+  inactiveButtonClass: "form__button_disabled",
+};
+
+enableValidation(addCardValidationConfig); //enableValidation end
 
 const profileEditButton = document.getElementById("profile-edit-button");
 const profileEditModal = document.getElementById("profile-edit-modal");
