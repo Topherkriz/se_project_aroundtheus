@@ -159,7 +159,7 @@ enableValidation({
   submitButtonSelector: ".modal__button",
   inactiveButtonClass: "popup__button_disabled",
   inputErrorClass: "popup__input_type_error",
-  errorClass: ".modal__input_error",
+  errorClass: "modal__input_error",
 });
 
 export { enableValidation };
