@@ -112,6 +112,7 @@ function enableValidation(config) {
 }
 
 */
+
 const showInputError = (input, formEl, { errorClass }) => {
   const errorSpan = formEl.querySelector("#" + input.id + "-error");
   errorSpan.textContent = input.validationMessage;
@@ -126,9 +127,9 @@ const hideInputError = (input, formEl, { errorClass }) => {
 
 const checkInputValidity = (formEl, input, settings) => {
   if (input.validity.valid) {
-    hideInputError(formEl, input, settings);
+    hideInputError(input, formEl, settings);
   } else {
-    showInputError(formEl, input, settings);
+    showInputError(input, formEl, settings);
   }
 };
 
@@ -158,7 +159,7 @@ enableValidation({
   submitButtonSelector: ".modal__button",
   inactiveButtonClass: "popup__button_disabled",
   inputErrorClass: "popup__input_type_error",
-  errorClass: "modal__error_visible",
+  errorClass: ".modal__input_error",
 });
 
 export { enableValidation };
