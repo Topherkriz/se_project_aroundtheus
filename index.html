@@ -72,6 +72,12 @@
             minlength="2"
             maxlength="40"
           />
+          <span
+            id="modal-profile-title-input-error"
+            class="modal__error_visible"
+          >
+            Please fill out this field
+          </span>
           <input
             type="text"
             name="description"
@@ -82,11 +88,7 @@
             minlength="2"
             maxlength="200"
           />
-          <div class="modal__error" id="js-profile-title-input-error"></div>
-          <div
-            class="modal__error"
-            id="js-profile-description-input-error"
-          ></div>
+          <div class="modal-profile-description-input-error"></div>
           <button class="modal__button" id="save-button-edit" type="submit">
             Save
           </button>
@@ -111,7 +113,7 @@
             id="js-title-input"
             class="modal__input modal__input_type_title"
             required
-            minlength="2"
+            minlength="1"
             maxlength="30"
           />
           <input
@@ -122,7 +124,6 @@
             class="modal__input modal__input_type_url"
             required
           />
-          <div class="modal__error" id="js-url-input-error"></div>
           <button class="modal__button" id="save-button-card" type="submit">
             Save
           </button>
