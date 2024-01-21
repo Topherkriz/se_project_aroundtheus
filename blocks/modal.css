@@ -50,7 +50,7 @@
   max-width: max-content;
   font-size: 24px;
   font-weight: 900;
-  line-height: 29px;
+  line-height: 23px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   margin: 34px 64px 0 36px;
 }
@@ -62,7 +62,7 @@
   background-color: #000;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
-  margin: 48px 36px 36.51px 36px;
+  margin: 28px 36px;
   border-radius: 2px;
   font-weight: 400;
   font-size: 18px;
@@ -94,14 +94,14 @@
   box-sizing: border-box;
 }
 
-.modal__input:last-of-type {
+/*.modal__input:last-of-type {
   margin-top: 39px;
-}
+}*/
 
-modal__input_url_error {
+.modal__input_error {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 14px;
-  color: #000;
+  color: rgb(255, 0, 0);
 }
 
 .modal__image-container {
