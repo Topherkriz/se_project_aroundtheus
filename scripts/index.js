@@ -60,6 +60,24 @@ const imageModalCloseButton = document.getElementById("image-modal-close");
 const modalImage = document.getElementById("modal-image-image");
 const modalImageTitle = document.getElementById("modal-image-title");
 
+// Add event listener for escape key
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closePopup(profileEditModal);
+    closePopup(addCardModal);
+    closePopup(imageModal);
+  }
+});
+
+// Add event listener for click on overlay
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("modal_open")) {
+    closePopup(profileEditModal);
+    closePopup(addCardModal);
+    closePopup(imageModal);
+  }
+});
+
 function openPopup(modal) {
   modal.classList.add("modal_open");
 }
