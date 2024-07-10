@@ -51,7 +51,10 @@
   font-weight: 900;
   line-height: 23px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  margin: 34px 64px 0 36px;
+  margin-right: 64px;
+  margin-left: 36px;
+  width: 330px;
+  height: 23px;
 }
 
 .modal__button {
@@ -80,6 +83,8 @@
   width: 358px;
   height: 27.26px;
   margin: auto;
+  margin-bottom: 20px;
+  margin-top: 55px;
 }
 
 .modal__input {
@@ -168,6 +173,8 @@
   .modal__form {
     width: 238px;
     height: 26px;
+    margin-top: 20px;
+    margin-bottom: 45px;
   }
 }
 
@@ -188,10 +195,7 @@
   .modal__heading {
     width: 238px;
     height: 22px;
-    margin: 22px;
+    margin-top: 22px;
+    margin-bottom: 60px;
   }
 }
-/*@media screen and (max-width: 580px) {
-  .modal__input_error {
-  }
-}*/

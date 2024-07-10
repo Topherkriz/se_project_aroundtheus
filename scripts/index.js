@@ -60,32 +60,12 @@ const imageModalCloseButton = document.getElementById("image-modal-close");
 const modalImage = document.getElementById("modal-image-image");
 const modalImageTitle = document.getElementById("modal-image-title");
 
-let currentModal = null;
-
 function openPopup(modal) {
   modal.classList.add("modal_open");
-  currentModal = modal;
-  window.addEventListener("keydown", handleEscapePress);
-  modal.addEventListener("click", handleOverlayClick);
 }
 
 function closePopup(modal) {
   modal.classList.remove("modal_open");
-  currentModal = null;
-  window.removeEventListener("keydown", handleEscapePress);
-  modal.removeEventListener("click", handleOverlayClick);
-}
-
-function handleEscapePress(event) {
-  if (event.key === "Escape" && currentModal) {
-    closePopup(currentModal);
-  }
-}
-
-function handleOverlayClick(event) {
-  if (event.target === currentModal) {
-    closePopup(currentModal);
-  }
 }
 
 function getCardElement(cardData) {
