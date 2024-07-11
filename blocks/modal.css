@@ -53,6 +53,7 @@
   font-family: "Inter", Arial, Helvetica, sans-serif;
   margin-right: 64px;
   margin-left: 36px;
+  margin-top: 35px;
   width: 330px;
   height: 23px;
 }
@@ -97,18 +98,35 @@
   box-sizing: border-box;
 }
 
-#js-title-input-error {
+.modal__input_error {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: rgb(255, 0, 0);
   border-block-color: inherit;
 }
 
+.modal__input_type_title {
+  position: fixed;
+  top: 44%;
+  width: 358px;
+  height: 27.26px;
+}
+
+#js-title-input-error {
+  position: fixed;
+  top: 47%;
+}
+
+.modal__input_type_url {
+  position: fixed;
+  top: 51%;
+  width: 358px;
+  height: 27.26px;
+}
+
 #js-url-input-error {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  color: rgb(255, 0, 0);
-  border-block-color: inherit;
+  position: fixed;
+  top: 54%;
 }
 
 .modal__image-container {
